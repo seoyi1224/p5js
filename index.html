@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Visual Portfolio</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      background-color: #0f0f0f;
+      color: #fff;
+      font-family: 'Arial', sans-serif;
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      padding: 40px 20px;
+    }
+
+    h1 {
+      font-size: 2rem;
+      margin-bottom: 10px;
+      letter-spacing: 2px;
+    }
+
+    p.subtitle {
+      color: #aaa;
+      margin-bottom: 40px;
+      font-size: 0.95rem;
+    }
+
+    .grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      grid-template-rows: auto auto;
+      gap: 20px;
+      width: 100%;
+      max-width: 900px;
+    }
+
+    .card {
+      position: relative;
+      border-radius: 12px;
+      overflow: hidden;
+      cursor: pointer;
+      background: #1a1a1a;
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+
+    .card:hover {
+      transform: translateY(-6px);
+      box-shadow: 0 12px 30px rgba(255,255,255,0.1);
+    }
+
+    .card img {
+      width: 100%;
+      height: 260px;
+      object-fit: cover;
+      display: block;
+    }
+
+    .card-label {
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      padding: 14px 16px;
+      background: linear-gradient(transparent, rgba(0,0,0,0.85));
+      font-size: 1rem;
+      font-weight: bold;
+      letter-spacing: 1px;
+    }
+
+    .card-label span {
+      font-size: 0.8rem;
+      color: #bbb;
+      font-weight: normal;
+      margin-left: 8px;
+    }
+
+    a {
+      text-decoration: none;
+      color: inherit;
+    }
+  </style>
+</head>
+<body>
+
+  <h1>Visual Portfolio</h1>
+  <p class="subtitle">p5.js 기반 시각 예술 작품 모음</p>
+
+  <div class="grid">
+
+    <!-- 과제1: 추상화 그리기 (jpg) -->
+    <a href="../과제1_추상화_그리기/index.html">
+      <div class="card">
+        <img src="images/hw1.jpg" alt="과제1 추상화 그리기">
+        <div class="card-label">과제 1 <span>추상화 그리기</span></div>
+      </div>
+    </a>
+
+    <!-- 과제4: 움직이는 추상화 그리기 (gif) -->
+    <a href="../과제4_움직이는_추상화_그리기/index.html">
+      <div class="card">
+        <img src="images/hw4.gif" alt="과제4 움직이는 추상화">
+        <div class="card-label">과제 4 <span>움직이는 추상화</span></div>
+      </div>
+    </a>
+
+    <!-- 과제2: 캐리커처 그리기 (jpg) -->
+    <a href="../과제2_캐리커처_그리기/index.html">
+      <div class="card">
+        <img src="images/hw2.jpg" alt="과제2 캐리커처 그리기">
+        <div class="card-label">과제 2 <span>캐리커처 그리기</span></div>
+      </div>
+    </a>
+
+    <!-- 과제3: 움직이는 캐릭터 그리기 (gif) -->
+    <a href="../과제3_움직이는_캐릭터_그리기/index.html">
+      <div class="card">
+        <img src="images/hw3.gif" alt="과제3 움직이는 캐릭터">
+        <div class="card-label">과제 3 <span>움직이는 캐릭터</span></div>
+      </div>
+    </a>
+
+  </div>
+
+</body>
+</html>
